@@ -30,7 +30,6 @@
 
         &:focus-visible,
         &:focus-within {
-          border: 0.2rem solid $primary-color;
           outline: 0.2rem solid $primary-color;
         }
       }

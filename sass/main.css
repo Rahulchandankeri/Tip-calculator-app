@@ -93,7 +93,6 @@ body {
 }
 
 .container .sub-section__calc-section .bill-amount:focus-visible, .container .sub-section__calc-section .total-people:focus-visible, .container .sub-section__calc-section .bill-amount:focus-within, .container .sub-section__calc-section .total-people:focus-within {
-  border: 0.2rem solid #26c0ab;
   outline: 0.2rem solid #26c0ab;
 }
 
