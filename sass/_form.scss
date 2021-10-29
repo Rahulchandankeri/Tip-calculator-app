@@ -1,0 +1,186 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 10rem auto;
+
+  .sub-section {
+    display: flex;
+    background: #fff;
+    padding: 3rem;
+    border-radius: 2rem;
+    @media only screen and (max-width: 690px) {
+      flex-wrap: wrap;
+      padding: 0;
+      justify-content: center;
+      padding-bottom: 5%;
+    }
+    // Calculation section
+    &__calc-section {
+      background-color: #fff;
+      padding: 2rem;
+
+      .bill-amount {
+        display: flex;
+        border: 0.2rem solid transparent;
+        border-radius: 0.4rem;
+        padding: 0.5rem;
+        background-color: #f4fafa;
+        margin-top: 0.5rem;
+        align-items: center;
+
+        &:focus-visible,
+        &:focus-within {
+          border: 0.2rem solid $primary-color;
+          outline: 0.2rem solid $primary-color;
+        }
+      }
+      .block {
+        display: flex;
+        margin-top: 1rem;
+        justify-content: space-between;
+      }
+      .tip-select {
+        display: inline-block;
+        padding: 1rem 3rem;
+        background-color: #00494d;
+        color: $color-white;
+        border: none;
+        border-radius: 0.5rem;
+        font-weight: 700;
+        width: 9.4rem;
+        font-family: $font-family-2;
+        cursor: pointer;
+        font-size: 1.4rem;
+        margin-right: 1.2%;
+        &:hover {
+          background-color: $primary-color;
+          color: $secondary-color;
+        }
+      }
+      .custom-tip {
+        width: 9.4rem;
+        border: none;
+        border-radius: 0.5rem;
+        background-color: #f4fafa;
+        text-align: center;
+        font-family: $font-family-2;
+        font-weight: 700;
+        letter-spacing: 0.1rem;
+        color: #5e7a7d;
+
+        &:hover,
+        &:focus-visible:not(:last-child) {
+          outline: $primary-color;
+          border: 0.2rem solid $primary-color;
+        }
+        @media only screen and (max-width: 790px) {
+          margin-top: 0.5rem;
+          height: 3rem;
+        }
+      }
+      .total-people {
+        @extend .bill-amount;
+      }
+    }
+    .invalid-Person {
+      outline: 0.2rem solid red;
+    }
+    .invalid-entry,
+    .invalid-entry_2 {
+      color: red;
+    }
+    // Result section
+    &__result-section {
+      position: relative;
+      background-color: #00494d;
+      padding: 2rem;
+      border-radius: 2rem;
+
+      .tip-amount {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      #total-tip,
+      #total-amount {
+        font-size: 4rem;
+        color: #26c0ab;
+        font-weight: $font-weight-3;
+        font-family: $font-family-2;
+      }
+      .total {
+        @extend .tip-amount;
+      }
+      .result-caption {
+        color: $color-white;
+      }
+      .result-caption-2 {
+        color: hsl(184, 14%, 56%);
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
+      .Reset-btn {
+        text-transform: uppercase;
+        display: inline-block;
+        font-size: 1.4rem;
+        padding: 1rem 14rem;
+        border-radius: 0.5rem;
+        letter-spacing: 0.1rem;
+        background-color: #26c0ab;
+        color: #00494d;
+        border: none;
+        font-weight: 700;
+        margin-top: 20%;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #9fe8df;
+        }
+        @media only screen and (max-width: 376px) {
+          padding: 1rem 9rem !important;
+        }
+      }
+
+      .disable-btn {
+        opacity: 0.2;
+        cursor: auto;
+
+        &:hover {
+          background-color: #26c0ab;
+        }
+      }
+    }
+  }
+}
+
+.input-num,
+.input-num::placeholder,
+.input-num:focus-visible {
+  border: none;
+  outline: none;
+  background-color: #f4fafa;
+  text-align: right;
+  width: 100%;
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: $secondary-color;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+.svg-icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+label {
+  font-weight: 400;
+  font-family: $font-family-2;
+  font-size: 1.4rem;
+  color: #00494d;
+}

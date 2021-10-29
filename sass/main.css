@@ -1,0 +1,303 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1.6;
+  font-size: 1.5rem;
+  background-color: #c5e4e7;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.margin-top {
+  margin-top: 2.5rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+.heading {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Space Mono", monospace;
+  color: #00494d;
+  letter-spacing: 0.1rem;
+  margin-top: 2rem;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10rem auto;
+}
+
+.container .sub-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #fff;
+  padding: 3rem;
+  border-radius: 2rem;
+}
+
+@media only screen and (max-width: 690px) {
+  .container .sub-section {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 5%;
+  }
+}
+
+.container .sub-section__calc-section {
+  background-color: #fff;
+  padding: 2rem;
+}
+
+.container .sub-section__calc-section .bill-amount, .container .sub-section__calc-section .total-people {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 0.2rem solid transparent;
+  border-radius: 0.4rem;
+  padding: 0.5rem;
+  background-color: #f4fafa;
+  margin-top: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .sub-section__calc-section .bill-amount:focus-visible, .container .sub-section__calc-section .total-people:focus-visible, .container .sub-section__calc-section .bill-amount:focus-within, .container .sub-section__calc-section .total-people:focus-within {
+  border: 0.2rem solid #26c0ab;
+  outline: 0.2rem solid #26c0ab;
+}
+
+.container .sub-section__calc-section .block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .sub-section__calc-section .tip-select {
+  display: inline-block;
+  padding: 1rem 3rem;
+  background-color: #00494d;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  width: 9.4rem;
+  font-family: "Space Mono", monospace;
+  cursor: pointer;
+  font-size: 1.4rem;
+  margin-right: 1.2%;
+}
+
+.container .sub-section__calc-section .tip-select:hover {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+.container .sub-section__calc-section .custom-tip {
+  width: 9.4rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #f4fafa;
+  text-align: center;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  color: #5e7a7d;
+}
+
+.container .sub-section__calc-section .custom-tip:hover, .container .sub-section__calc-section .custom-tip:focus-visible:not(:last-child) {
+  outline: #26c0ab;
+  border: 0.2rem solid #26c0ab;
+}
+
+@media only screen and (max-width: 790px) {
+  .container .sub-section__calc-section .custom-tip {
+    margin-top: 0.5rem;
+    height: 3rem;
+  }
+}
+
+.container .sub-section .invalid-Person {
+  outline: 0.2rem solid red;
+}
+
+.container .sub-section .invalid-entry,
+.container .sub-section .invalid-entry_2 {
+  color: red;
+}
+
+.container .sub-section__result-section {
+  position: relative;
+  background-color: #00494d;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.container .sub-section__result-section .tip-amount, .container .sub-section__result-section .total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .sub-section__result-section #total-tip,
+.container .sub-section__result-section #total-amount {
+  font-size: 4rem;
+  color: #26c0ab;
+  font-weight: 700;
+  font-family: "Space Mono", monospace;
+}
+
+.container .sub-section__result-section .result-caption {
+  color: #fff;
+}
+
+.container .sub-section__result-section .result-caption-2 {
+  color: #7f9c9f;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.container .sub-section__result-section .Reset-btn {
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 1.4rem;
+  padding: 1rem 14rem;
+  border-radius: 0.5rem;
+  letter-spacing: 0.1rem;
+  background-color: #26c0ab;
+  color: #00494d;
+  border: none;
+  font-weight: 700;
+  margin-top: 20%;
+  cursor: pointer;
+}
+
+.container .sub-section__result-section .Reset-btn:hover {
+  background-color: #9fe8df;
+}
+
+@media only screen and (max-width: 376px) {
+  .container .sub-section__result-section .Reset-btn {
+    padding: 1rem 9rem !important;
+  }
+}
+
+.container .sub-section__result-section .disable-btn {
+  opacity: 0.2;
+  cursor: auto;
+}
+
+.container .sub-section__result-section .disable-btn:hover {
+  background-color: #26c0ab;
+}
+
+.input-num,
+.input-num::-webkit-input-placeholder,
+.input-num:focus-visible {
+  border: none;
+  outline: none;
+  background-color: #f4fafa;
+  text-align: right;
+  width: 100%;
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #00494d;
+}
+
+.input-num,
+.input-num:-ms-input-placeholder,
+.input-num:focus-visible {
+  border: none;
+  outline: none;
+  background-color: #f4fafa;
+  text-align: right;
+  width: 100%;
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #00494d;
+}
+
+.input-num,
+.input-num::-ms-input-placeholder,
+.input-num:focus-visible {
+  border: none;
+  outline: none;
+  background-color: #f4fafa;
+  text-align: right;
+  width: 100%;
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #00494d;
+}
+
+.input-num,
+.input-num::placeholder,
+.input-num:focus-visible {
+  border: none;
+  outline: none;
+  background-color: #f4fafa;
+  text-align: right;
+  width: 100%;
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #00494d;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+.svg-icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+label {
+  font-weight: 400;
+  font-family: "Space Mono", monospace;
+  font-size: 1.4rem;
+  color: #00494d;
+}
+/*# sourceMappingURL=main.css.map */

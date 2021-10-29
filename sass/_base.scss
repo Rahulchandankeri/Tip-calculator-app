@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: $font-family;
+  line-height: 1.6;
+  font-size: 1.5rem;
+  background-color: #c5e4e7;
+  box-sizing: border-box;
+}
+
+// Helpers
+.margin-top {
+  margin-top: 2.5rem;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
