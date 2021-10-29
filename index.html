@@ -23,103 +23,104 @@
   </head>
   <body>
     <h2 class="heading">Splitter</h2>
-    <div class="container">
-      <div class="sub-section">
-        <div class="sub-section__calc-section">
-          <div class="bill">
-            <div style="display: flex; justify-content: space-between">
-              <label>Bill</label>
-              <label class="invalid-entry_2"></label>
-            </div>
-            <div class="bill-amount">
-              <div class="svg-icon">
-                <svg class="svg-icon">
-                  <use xlink:href="images/sprite.svg#icon-dollar"></use>
-                </svg>
+    <main>
+      <div class="container">
+        <div class="sub-section">
+          <div class="sub-section__calc-section">
+            <div class="bill">
+              <div style="display: flex; justify-content: space-between">
+                <label>Bill</label>
+                <label class="invalid-entry_2"></label>
               </div>
-              <input
-                class="input-num"
-                type="number"
-                min="0"
-                id="getBill"
-                required
-              />
-            </div>
-          </div>
-
-          <div class="tip-selection margin-top">
-            <label>Select Tip %</label>
-            <div class="select-options">
-              <div class="block">
-                <button class="tip-select" onclick="press(5)">5%</button>
-                <button class="tip-select" onclick="press(10)">10%</button>
-                <button class="tip-select" onclick="press(15)">15%</button>
-              </div>
-              <div class="block">
-                <button class="tip-select" onclick="press(25)">25%</button>
-                <button class="tip-select" onclick="press(50)">50%</button>
+              <div class="bill-amount">
+                <div class="svg-icon">
+                  <svg class="svg-icon">
+                    <use xlink:href="images/sprite.svg#icon-dollar"></use>
+                  </svg>
+                </div>
                 <input
-                  class="custom-tip"
+                  class="input-num"
                   type="number"
-                  placeholder="Custom"
                   min="0"
-                  id="customTip"
+                  id="getBill"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="tip-selection margin-top">
+              <label>Select Tip %</label>
+              <div class="select-options">
+                <div class="block">
+                  <button class="tip-select" onclick="press(5)">5%</button>
+                  <button class="tip-select" onclick="press(10)">10%</button>
+                  <button class="tip-select" onclick="press(15)">15%</button>
+                </div>
+                <div class="block">
+                  <button class="tip-select" onclick="press(25)">25%</button>
+                  <button class="tip-select" onclick="press(50)">50%</button>
+                  <input
+                    class="custom-tip"
+                    type="number"
+                    placeholder="Custom"
+                    min="0"
+                    id="customTip"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="number-of-people margin-top">
+              <div style="display: flex; justify-content: space-between">
+                <label>Number of people</label>
+                <label class="invalid-entry"></label>
+              </div>
+
+              <div class="total-people">
+                <div class="svg-icon">
+                  <svg class="svg-icon">
+                    <use xlink:href="images/sprite.svg#icon-person"></use>
+                  </svg>
+                </div>
+                <input
+                  class="input-num"
+                  type="number"
+                  min="1"
+                  max="500"
+                  id="getPerson"
                 />
               </div>
             </div>
           </div>
 
-          <div class="number-of-people margin-top">
-            <div style="display: flex; justify-content: space-between">
-              <label>Number of people</label>
-              <label class="invalid-entry"></label>
+          <div class="sub-section__result-section">
+            <div class="tip-amount margin-top">
+              <span class="result-caption">
+                Tip Amount
+                <p class="result-caption-2">/ Person</p>
+              </span>
+              <h2 id="total-tip">$4.27</h2>
             </div>
 
-            <div class="total-people">
-              <div class="svg-icon">
-                <svg class="svg-icon">
-                  <use xlink:href="images/sprite.svg#icon-person"></use>
-                </svg>
-              </div>
-              <input
-                class="input-num"
-                type="number"
-                min="1"
-                max="500"
-                id="getPerson"
-              />
+            <div class="total margin-top">
+              <span class="result-caption">
+                Total
+                <p class="result-caption-2">/ Person</p>
+              </span>
+              <h2 id="total-amount">$32.7</h2>
             </div>
+            <button class="Reset-btn disable-btn">Reset</button>
           </div>
-        </div>
-
-        <div class="sub-section__result-section">
-          <div class="tip-amount margin-top">
-            <span class="result-caption">
-              Tip Amount
-              <p class="result-caption-2">/ Person</p>
-            </span>
-            <h2 id="total-tip">$4.27</h2>
-          </div>
-
-          <div class="total margin-top">
-            <span class="result-caption">
-              Total
-              <p class="result-caption-2">/ Person</p>
-            </span>
-            <h2 id="total-amount">$32.7</h2>
-          </div>
-          <button class="Reset-btn disable-btn">Reset</button>
         </div>
       </div>
-    </div>
-
-    <div class="attribution">
+    </main>
+    <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor
       </a>
       Coded by <a href="#">Rahul Chandankeri</a>
-    </div>
+    </footer>
 
     <script src="main-optima.js"></script>
   </body>
