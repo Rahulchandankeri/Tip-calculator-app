@@ -54,14 +54,14 @@ let perform = () => {
     if (person >= 1) {
       tipPerPerson = document.querySelector(
         "#total-tip"
-      ).textContent = `$${tipValue}`;
+      ).textContent = `₹${tipValue}`;
 
       //  Computing total amount payable per person including tip
       split = Number(bill) / Number(person) + Number(tipValue);
       if (split >= 1 && person >= 1) {
         totalperPerson = document.querySelector(
           "#total-amount"
-        ).textContent = `$${Math.trunc(split)}`;
+        ).textContent = `₹${Math.trunc(split)}`;
       }
 
       return split;
